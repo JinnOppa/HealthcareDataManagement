@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Medicine Management</title>
+    <script src="https://cdn.jsdelivr.net/npm/web3@latest/dist/web3.min.js"></script>
+    <script src="app.js" defer></script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f9;
+        }
+
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+
+        .container {
+            width: 80%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+            background: #fff;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            margin-bottom: 20px;
+        }
+
+        input[type="text"], input[type="number"] {
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            font-size: 16px;
+            width: 100%;
+        }
+
+        button {
+            padding: 10px 15px;
+            border: none;
+            border-radius: 4px;
+            background-color: #007bff;
+            color: #fff;
+            font-size: 16px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        button:hover {
+            background-color: #0056b3;
+        }
+
+        h2 {
+            margin-top: 0;
+            color: #555;
+        }
+
+        .result {
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            background-color: #f9f9f9;
+            margin-top: 10px;
+        }
+
+        #medicineDetails, #medicinesList {
+            white-space: pre-wrap; /* Preserve whitespace formatting */
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Medicine Management</h1>
+
+        <h2>Add Medicine</h2>
+        <form id="addMedicineForm">
+            <input type="text" id="batchID" placeholder="Batch ID" required>
+            <input type="text" id="medicineName" placeholder="Medicine Name" required>
+            <input type="text" id="manufacturer" placeholder="Manufacturer" required>
+            <input type="number" id="productionDate" placeholder="Production Date (timestamp)" required>
+            <input type="number" id="expiryDate" placeholder="Expiry Date (timestamp)" required>
+            <button type="submit">Add Medicine</button>
+        </form>
+
+        <h2>Get Medicine</h2>
+        <input type="text" id="getBatchID" placeholder="Batch ID">
+        <button id="getMedicineButton">Get Medicine</button>
+        <div id="medicineDetails" class="result"></div>
+
+        <h2>List All Medicines</h2>
+        <button id="listMedicinesButton">List Medicines</button>
+        <div id="medicinesList" class="result"></div>
+    </div>
+</body>
+</html>
