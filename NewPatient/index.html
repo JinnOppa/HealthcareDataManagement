@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Patient Record Management</title>
+    <script src="https://cdn.jsdelivr.net/npm/web3@latest/dist/web3.min.js"></script>
+    <script src="app.js" defer></script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f9;
+            color: #333;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 30px auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h1, h2 {
+            color: #007bff;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        input[type="text"], input[type="number"] {
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            font-size: 16px;
+        }
+
+        button {
+            padding: 10px 20px;
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            border-radius: 4px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        button:hover {
+            background-color: #0056b3;
+        }
+
+        .result {
+            margin-top: 20px;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            background-color: #f9f9f9;
+        }
+
+        .result div {
+            margin-bottom: 10px;
+        }
+
+        .result strong {
+            display: inline-block;
+            width: 150px;
+        }
+
+        hr {
+            border: 0;
+            border-top: 1px solid #ddd;
+            margin: 10px 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Patient Record Management</h1>
+
+        <h2>Add Patient Record</h2>
+        <form id="addPatientForm">
+            <input type="text" id="recordID" placeholder="Record ID" required>
+            <input type="text" id="patientName" placeholder="Patient Name" required>
+            <input type="text" id="diagnosis" placeholder="Diagnosis">
+            <input type="text" id="treatment" placeholder="Treatment">
+            <input type="number" id="date" placeholder="Date (timestamp)" required>
+            <button type="submit">Add Patient Record</button>
+        </form>
+
+        <h2>Get Patient Record</h2>
+        <input type="text" id="getRecordID" placeholder="Record ID">
+        <button id="getPatientButton">Get Patient Record</button>
+        <div id="patientDetails" class="result"></div>
+
+        <h2>List All Patients</h2>
+        <button id="listPatientsButton">List Patients</button>
+        <div id="patientsList" class="result"></div>
+    </div>
+</body>
+</html>
