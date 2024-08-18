@@ -1,0 +1,215 @@
+{
+	"compiler": {
+		"version": "0.8.26+commit.8a97fa7a"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"inputs": [],
+				"stateMutability": "nonpayable",
+				"type": "constructor"
+			},
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": false,
+						"internalType": "string",
+						"name": "batchID",
+						"type": "string"
+					},
+					{
+						"indexed": false,
+						"internalType": "string",
+						"name": "medicineName",
+						"type": "string"
+					},
+					{
+						"indexed": false,
+						"internalType": "string",
+						"name": "manufacturer",
+						"type": "string"
+					}
+				],
+				"name": "MedicineAdded",
+				"type": "event"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "string",
+						"name": "_batchID",
+						"type": "string"
+					},
+					{
+						"internalType": "string",
+						"name": "_medicineName",
+						"type": "string"
+					},
+					{
+						"internalType": "string",
+						"name": "_manufacturer",
+						"type": "string"
+					},
+					{
+						"internalType": "uint256",
+						"name": "_productionDate",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "_expiryDate",
+						"type": "uint256"
+					}
+				],
+				"name": "addMedicine",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "string",
+						"name": "_batchID",
+						"type": "string"
+					}
+				],
+				"name": "getMedicine",
+				"outputs": [
+					{
+						"internalType": "string",
+						"name": "medicineName",
+						"type": "string"
+					},
+					{
+						"internalType": "string",
+						"name": "manufacturer",
+						"type": "string"
+					},
+					{
+						"internalType": "uint256",
+						"name": "productionDate",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "expiryDate",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "listAllMedicines",
+				"outputs": [
+					{
+						"components": [
+							{
+								"internalType": "string",
+								"name": "batchID",
+								"type": "string"
+							},
+							{
+								"internalType": "string",
+								"name": "medicineName",
+								"type": "string"
+							},
+							{
+								"internalType": "string",
+								"name": "manufacturer",
+								"type": "string"
+							},
+							{
+								"internalType": "uint256",
+								"name": "productionDate",
+								"type": "uint256"
+							},
+							{
+								"internalType": "uint256",
+								"name": "expiryDate",
+								"type": "uint256"
+							}
+						],
+						"internalType": "struct Medicine.MedicineDetails[]",
+						"name": "",
+						"type": "tuple[]"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "owner",
+				"outputs": [
+					{
+						"internalType": "address",
+						"name": "",
+						"type": "address"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "string",
+						"name": "_batchID",
+						"type": "string"
+					}
+				],
+				"name": "verifyMedicineAuthenticity",
+				"outputs": [
+					{
+						"internalType": "bool",
+						"name": "",
+						"type": "bool"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"createContractMedicine.sol": "Medicine"
+		},
+		"evmVersion": "cancun",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"createContractMedicine.sol": {
+			"keccak256": "0x1b4f9a17a3340a0812f6f8f22cdd22829b843269e21255325d32f66aebcb4ec2",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://05fb6da917337abda769bfb8f6d4d53eada05bd3f39a0f36be7f659d85e5bdc8",
+				"dweb:/ipfs/QmdsRtpvpsHQ5cEgKimAa8WUcPW8UdVL3yLaYhAM47qc5a"
+			]
+		}
+	},
+	"version": 1
+}

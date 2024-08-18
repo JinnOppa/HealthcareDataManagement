@@ -1,0 +1,152 @@
+{
+	"compiler": {
+		"version": "0.8.26+commit.8a97fa7a"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"inputs": [
+					{
+						"internalType": "string",
+						"name": "_recordID",
+						"type": "string"
+					},
+					{
+						"internalType": "string",
+						"name": "_patientName",
+						"type": "string"
+					},
+					{
+						"internalType": "string",
+						"name": "_diagnosis",
+						"type": "string"
+					},
+					{
+						"internalType": "string",
+						"name": "_treatment",
+						"type": "string"
+					},
+					{
+						"internalType": "uint256",
+						"name": "_date",
+						"type": "uint256"
+					}
+				],
+				"name": "addPatientRecord",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "string",
+						"name": "_recordID",
+						"type": "string"
+					}
+				],
+				"name": "getPatientRecord",
+				"outputs": [
+					{
+						"internalType": "string",
+						"name": "patientName",
+						"type": "string"
+					},
+					{
+						"internalType": "string",
+						"name": "diagnosis",
+						"type": "string"
+					},
+					{
+						"internalType": "string",
+						"name": "treatment",
+						"type": "string"
+					},
+					{
+						"internalType": "uint256",
+						"name": "date",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "string",
+						"name": "",
+						"type": "string"
+					}
+				],
+				"name": "patientRecords",
+				"outputs": [
+					{
+						"internalType": "string",
+						"name": "recordID",
+						"type": "string"
+					},
+					{
+						"internalType": "string",
+						"name": "patientName",
+						"type": "string"
+					},
+					{
+						"internalType": "string",
+						"name": "diagnosis",
+						"type": "string"
+					},
+					{
+						"internalType": "string",
+						"name": "treatment",
+						"type": "string"
+					},
+					{
+						"internalType": "uint256",
+						"name": "date",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"createContractPatient.sol": "Patient"
+		},
+		"evmVersion": "cancun",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"createContractPatient.sol": {
+			"keccak256": "0xbee738bfee71ed9c4a96a36c2a1ebee4e14f3d23bc1dd9bd8de337e862d2b090",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://ce870b83f9e9e04abc567f4f8eedd3a629b85d0fa989d84d788fc539e2a14809",
+				"dweb:/ipfs/Qmec6bDAjfhMERudEjf3ViTRs5gUtzaSUrpyhkQ5LZeCmR"
+			]
+		}
+	},
+	"version": 1
+}
